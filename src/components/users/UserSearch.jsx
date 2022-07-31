@@ -51,7 +51,7 @@ function UserSearch() {
             </div>
           </form>
         </div>
-        {users.length > 0 && (
+        {users?.length > 0 && (
           <div>
             <button
               className="btn btn-lg btn-success"
