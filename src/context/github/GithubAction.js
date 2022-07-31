@@ -14,13 +14,13 @@ export const searchUsers = async (text) => {
   const params = new URLSearchParams({
     q: text,
   });
-  const response = await githubApi.get(`${GITHUB_URL}/search/users?${params}`);
+  const response = await githubApi.get(`/search/users?${params}`);
   console.log(response);
   return response.data.items;
 };
 
 export const getUser = async (login) => {
-  const response = await githubApi.get(`${GITHUB_URL}/users/${login}`);
+  const response = await githubApi.get(`/users/${login}`);
   if (response.status === 404) {
     window.location = "/notfound";
   } else {
@@ -33,8 +33,6 @@ export const getRepos = async (login) => {
     sort: "created",
     per_page: 10,
   });
-  const response = await githubApi.get(
-    `${GITHUB_URL}/users/${login}/repos?${params}`
-  );
+  const response = await githubApi.get(`/users/${login}/repos?${params}`);
   return response.data;
 };
