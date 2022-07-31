@@ -15,17 +15,12 @@ export const searchUsers = async (text) => {
     q: text,
   });
   const response = await githubApi.get(`/search/users?${params}`);
-  console.log(response);
   return response.data.items;
 };
 
 export const getUser = async (login) => {
   const response = await githubApi.get(`/users/${login}`);
-  if (response.status === 404) {
-    window.location = "/notfound";
-  } else {
-    return response.data;
-  }
+  return response.data;
 };
 
 export const getRepos = async (login) => {
