@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function UserItem({ user: { login, avatar_url } }) {
   return (
-    <div className="card-side shadow-md compact bg-base-100">
+    <div className="card-side shadow-lg compact bg-base-100">
       <div className="flex-row items-center space-x-4 card-body">
         <div>
           <div className="avatar">
@@ -18,7 +18,7 @@ function UserItem({ user: { login, avatar_url } }) {
             className="text-base-content text-opacity-40"
             to={`/user/${login}`}
           >
-            Visit Profile
+            Go to profile
           </Link>
         </div>
       </div>

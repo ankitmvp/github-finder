@@ -11,7 +11,7 @@ function UserSearch() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (text === "") {
-      setAlert("Please enter something in the text box", "error");
+      setAlert("Textbox cannot be empty ...", "error");
     } else {
       dispatch({ type: "SET_LOADING" });
       const users = await searchUsers(text);
@@ -26,7 +26,7 @@ function UserSearch() {
     <>
       <div>
         <h1 className="text-2xl pb-3">
-          Enter username to search the user on Github ...
+          Enter a username to search the user on Github ...
         </h1>
       </div>
       <div className="grid grid-cols-1 xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 mb-8 gap-8">
@@ -43,7 +43,7 @@ function UserSearch() {
                 />
                 <button
                   type="submit"
-                  className="absolute top-0 right-0 rounded-l-none w-36 btn btn-lg"
+                  className="absolute top-0 right-0 rounded-l-none w-36 btn btn-lg bg-gray-600"
                 >
                   Go
                 </button>

@@ -1,14 +1,14 @@
 function About() {
   return (
     <>
-      <h1 className="text-6xl mb-4">Github Finder</h1>
+      <h1 className="text-6xl mb-4">GitHub Lookup</h1>
       <p className="mb-4 text-2xl font-light">
-        A React app to search GitHub profiles and view profile details.
+        An app developed using ReactJS and GitHub API to search users and view their profile details.
       </p>
-      <p className="text-lg text-gray-400">
-        Version <span>1.0.0</span>
+      <p className="text-lg text-gray-500">
+        Version <span>1.0</span>
       </p>
-      <p className="text-lg text-gray-400">
+      <p className="text-lg text-gray-500">
         Layout By:
         <a href="https://twitter.com/ankitmvp">Ankit Bansal</a>
       </p>
